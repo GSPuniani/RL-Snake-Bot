@@ -5,7 +5,7 @@ from collections import namedtuple
 import numpy as np
 import math
 pygame.init()
-font = pygame.font.Font('arial.ttf',25)
+font = pygame.font.SysFont('arial.ttf',25)
 
 # Reset 
 # Reward
@@ -64,10 +64,11 @@ class SnakeGameAI:
     def play_step(self,action):
         self.frame_iteration+=1
         # 1. Collect the user input
-        for event in pygame.event.get():
-            if(event.type == pygame.QUIT):
-                pygame.quit()
-                quit()
+        # TROUBLE
+        # for event in pygame.event.get():
+        #     if(event.type == pygame.QUIT):
+        #         pygame.quit()
+        #         quit()
             
         # 2. Move
         self._move(action)
