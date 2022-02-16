@@ -15,6 +15,8 @@ Clone this repo onto your local machine. Create and activate a virtual environme
 
 Take some time to read through the code. Check your understanding by answering the `TODO` prompts. When you're ready to start training the model, run the `agent.py` module. It will open up a GUI window that automatically runs the game over and over. After around 60-70 games, you should start to see some improvement in the performance of the model. Feel free to run the model as long as you want. When you're ready to stop, you will need to manually terminate the program by entering Ctrl-C in the Terminal. 
 
+There should be a `matplotlib` chart that displays the score over time, but it is currently prevented from showing up. As a bonus objective, try to figure out how to display the chart (created in `helper.py`) such that it does not crash the program.
+
 
 ## Reinforcement Learning
 In Reinforcement Learning, there are three main components: the <b>environment</b> (our game), the <b>model</b> (implemented with simple Q-learning or a neural network), and the <b>agent</b> (the snake). Every time the agent performs an action, the environment gives a reward to the agent, which can be positive or negative depending on how good the action was from that specific state.
@@ -35,8 +37,8 @@ The snake and food on the board randomly placed.
   3. Else      :    0
 * Update the Q value and Train the Model.
 
-After analysing the algorithm now we have to build the idea to proceed for coding this algorithm.<br><br>
-This is divided into three Modules named <b>Agent, Game, and Model</b>
+
+The algorithm is divided into three Modules: <b>Agent</b> (`agent.py`), <b>Game</b> (`snake_gameai.py`), and <b>Model</b> (`model.py`).
   <p align='center'>
     <img src="https://github.com/vedantgoswami/SnakeGameAI/blob/main/Images/agentstate.PNG" width=400px height=290px>
   </p>
