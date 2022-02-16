@@ -32,6 +32,7 @@ class QTrainer:
         #     print(i.is_cpu)
 
     
+    # TODO: Explain how this method works.
     def train_step(self,state,action,reward,next_state,done):
         state = torch.tensor(state,dtype=torch.float).cpu()
         next_state = torch.tensor(next_state,dtype=torch.float).cpu()

@@ -22,7 +22,7 @@ class Agent:
         # self.model.to('cuda')   
         # for n,p in self.model.named_parameters():
         #     print(p.device,'',n)         
-        # TODO: model,trainer
+
 
     # state (11 Values)
     #[ danger straight, danger right, danger left,
@@ -91,6 +91,7 @@ class Agent:
     def train_short_memory(self,state,action,reward,next_state,done):
         self.trainer.train_step(state,action,reward,next_state,done)
 
+    # TODO: What is the role of epsilon in this method? Feel free to reference the OpenAI Gym RL tutorial from 02/09/22
     def get_action(self,state):
         # random moves: tradeoff explotation / exploitation
         self.epsilon = 80 - self.n_game
@@ -105,6 +106,7 @@ class Agent:
             final_move[move]=1 
         return final_move
 
+# TODO: Write a couple sentences describing the training process coded below.
 def train():
     plot_scores = []
     plot_mean_scores = []
@@ -148,3 +150,6 @@ def train():
 
 if(__name__=="__main__"):
     train()
+
+# TODO: Write a brief paragraph on your thoughts about this implementation. 
+# Was there anything surprising, interesting, confusing, or clever? Does the code smell at all?
